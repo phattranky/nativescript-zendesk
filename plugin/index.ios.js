@@ -15,7 +15,21 @@ exports.openChat = function (options) {
 
     ZDCChat.startChatInWithConfig(frameModule.topmost().ios.controller, function(config) {
         config.emailTranscriptAction = ZDCEmailTranscriptActionNeverSend;
+        console.log("translate");
     });
+
+    // if (!ZDCChatAPI.instance().isAccountOnline) {
+    	console.log("check online");
+    	console.log(options.name);
+
+        ZDCChat.updateVisitor(function(user) {
+
+            // user.name = options.name;
+            user.name = "Quang";
+            // user.addNote(options.note);
+
+        });
+	// }
 }
 
 
