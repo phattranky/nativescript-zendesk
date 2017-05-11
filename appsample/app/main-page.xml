@@ -11,6 +11,7 @@
             <Button text="HelpCenter - Open Section" tap="onLoadHelpCenterSection"/>
             <Button text="New Contact" tap="onCreateContact"/>
             <Button text="Contact List" tap="onLoadContact"/>
+            <Button text="Open Chat" tap="openChat"/>
         </StackLayout>
 
         <StackLayout class="auth">

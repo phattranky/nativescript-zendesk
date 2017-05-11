@@ -5,6 +5,12 @@ var zen = require("./zenmodel-common");
 var account = zen.account;
 var user = zen.user;
 
+exports.initChat = function(config){
+}
+
+exports.openChat = function (options) {
+}
+
 exports.init = function(config){
     account.appId = config.appId;
     account.url = config.url;

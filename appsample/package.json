@@ -5,12 +5,12 @@
       "version": "2.4.1"
     },
     "tns-ios": {
-      "version": "2.4.0"
+      "version": "3.0.0"
     }
   },
   "dependencies": {
     "nativescript-unit-test-runner": "^0.2.8",
-    "nativescript-zendesk": "file:../plugin",
+    "nativescript-zendesk-with-chat": "file:../plugin",
     "tns-core-modules": "^2.4.3"
   },
   "devDependencies": {

@@ -1,6 +1,7 @@
 var viewModel = require("./main-view-model");
-var zendeskModule = require("nativescript-zendesk");
+var zendeskModule = require("nativescript-zendesk-with-chat");
 var zendesk = null;
+var zendeskChat = null;
 var page = null; 
 
 var appID = "2cae45724539d7d7c8561aabfa133d39801e98a4ce1440a6";
@@ -19,6 +20,10 @@ exports.pageLoaded = function(args) {
         enableLogging: true,
         additionalInfo: "Here's some extra details to attach",
         tags: ["nativescript", "awesome", "yolo"]
+    });
+
+    zendeskChat = zendeskModule.initChat({
+        accountKey: "YOUR-ACCOUNT-KEY"
     });
 }
 
@@ -65,4 +70,9 @@ exports.onLoadContact = function(args){
  
     zendesk.openContactList();
 }
+
+exports.openChat = function(args) {
+    zendeskChat.openChat({});
+}
+
 

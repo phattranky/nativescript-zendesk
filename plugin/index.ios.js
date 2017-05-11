@@ -5,6 +5,20 @@ var zen = require("./zenmodel-common");
 var account = zen.account;
 var user = zen.user;
 
+exports.initChat = function(config){
+    ZDCChat.initializeWithAccountKey(config.accountKey);
+
+	return this;
+}
+
+exports.openChat = function (options) {
+
+    ZDCChat.startChatInWithConfig(frameModule.topmost().ios.controller, function(config) {
+        config.emailTranscriptAction = ZDCEmailTranscriptActionNeverSend;
+    });
+}
+
+
 exports.init = function(config){
     account.appId = config.appId;
     account.url = config.url;
